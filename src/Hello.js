@@ -1,12 +1,15 @@
 import React from 'react';
 
-function Hello({color,name, isSpecial}) {
-  return <div style={{ color}}>{isSpecial && <b>*</b> }안녕하세요 {name}</div>
+function Hello(props) {
+  return (
+  <div style={{ color: props.color }}>{props.isRendering && (<b>메롱메롱</b>)}안녕하세요 {props.helloBeautiful}</div>)
 }
 
-Hello.defaultProps={
-    name : '이름없음 앞에서 name속성지움쓰'
+Hello.defaultProps ={
+ helloBeautiful :'뭐야',
+ color :'lightgreen',
+ fontSize:'30px'
+  
 }
-
 
 export default Hello;
